@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>IoT Dashboard by Junyi </title>
+	<meta name="description" content="BIGTREE Smart home IOT platform">
+	<meta name="author" content="Junyi ZH">
+	<meta name="keyword" content="BIGTREE Smart home IOT platform">
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+
+	<!--third party plugin for create sensors-->
+	<link href="lib/css/thirdparty/jquery.gridster.min.css" rel="stylesheet" />
+	<link href="lib/css/thirdparty/codemirror.css" rel="stylesheet" />
+	<link href="lib/css/thirdparty/codemirror-ambiance.css" rel="stylesheet" />
+	<link href="lib/css/freeboard/styles.css" rel="stylesheet" />
+	<script src="lib/js/thirdparty/head.js"></script>
+	<!--basic ui design for dashboard-->
+	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link id="base-style" href="css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
+	<!-- end: CSS -->
+
+		
+</head>
+
+<body>
+		<!-- start: Header -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+
+				<!-- start: Header Menu Team logo -->
+				<div class="BigTreeLogo"><img src="img/broccoli.png"><span>&nbsp;&nbsp;DOMISEP-</span><a href="index.html"></a><span>BIGTREE</span></div>
+				<!-- end: Header Menu Team logo -->
+
+				<!-- start: Header Menu -->
+				<div class="nav-no-collapse header-nav">
+					<ul class="nav pull-right">
+						<!-- start: Warming Dropdown -->
+						<li class="dropdown hidden-phone">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+								<i class="halflings-icon white warning-sign"></i>
+							</a>
+							<ul class="dropdown-menu notifications">
+								<li class="dropdown-menu-title">
+ 									<span>You have 11 notifications</span>
+									<a href="#refresh"><i class="icon-repeat"></i></a>
+								</li>
+								<li>
+                                    <a href="#">
+										<span class="icon blue"><i class="halflings-icon bullhorn"></i></span>
+										<span class="message">报警！温度超过40摄氏度！</span>
+										<span class="time">just now</span>
+                                    </a>
+                                </li>
+								<li>
+									<a href="#">
+										<span class="icon blue"><i class="halflings-icon bullhorn"></i></span>
+										<span class="message">报警！你牙上有菜！</span>
+										<span class="time">2 min ago</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="icon blue"><i class="halflings-icon bullhorn"></i></span>
+										<span class="message">报警！出门没带钥匙！</span>
+										<span class="time">yesterday</span>
+									</a>
+								</li>
+                                <li class="dropdown-menu-sub-footer">
+                            		<a>View all notifications</a>
+								</li>	
+							</ul>
+						</li>
+						<!-- end: Warming Dropdown -->
+
+						<!-- start: Message Dropdown -->
+						<li class="dropdown hidden-phone">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+								<i class="halflings-icon white envelope"></i>
+							</a>
+							<ul class="dropdown-menu messages">
+								<li class="dropdown-menu-title">
+ 									<span>You have 3 messages</span>
+									<a href="#refresh"><i class="icon-repeat"></i></a>
+								</li>	
+                            	<li>
+                                    <a href="#">
+										<span class="avatar"><img src="img/lampe.png" alt="Avatar"></span>
+										<span class="header">
+											<span class="from">
+										    	Junyi ZH
+										     </span>
+											<span class="time">
+										    	just now
+										    </span>
+										</span>
+                                        <span class="message">
+                                            灯还亮着，记得关灯哦！
+                                        </span>  
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="#">
+										<span class="avatar"><img src="img/lampe.png" alt="Avatar"></span>
+										<span class="header">
+											<span class="from">
+										    	Junyi ZH
+										     </span>
+											<span class="time">
+										    	yesterday
+										    </span>
+										</span>
+                                        <span class="message">
+                                            灯还亮着，记得关灯哦！
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+										<span class="avatar"><img src="img/lampe.png" alt="Avatar"></span>
+										<span class="header">
+											<span class="from">
+										    	Junyi ZH
+										     </span>
+											<span class="time">
+										    	Jul 25, 2012
+										    </span>
+										</span>
+                                        <span class="message">
+                                            灯还亮着，记得关灯哦！
+                                        </span>
+                                    </a>
+                                </li>
+								<li>
+                            		<a class="dropdown-menu-sub-footer">View all messages</a>
+								</li>	
+							</ul>
+						</li>
+						<!-- end: Message Dropdown -->
+
+						<!-- start: User Dropdown -->
+						<li class="dropdown">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+								<i class="halflings-icon white user"></i> Junyi ZH
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-menu-title"><span>Account Settings</span></li>
+								<li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
+								<li><a href="#"><i class="halflings-icon cog"></i> Setting</a></li>
+								<li><a href="login.html"><i class="halflings-icon off"></i> Logout</a></li>
+							</ul>
+						</li>
+						<!-- end: User Dropdown -->
+					</ul>
+				</div>
+				<!-- end: Header Menu -->
+				
+			</div>
+		</div>
+	</div>
+		<!-- start: Header -->
+	
+		<div class="container-fluid-full">
+		<div class="row-fluid"><!--Main menu and content-->
+
+			<!-- start: Main Menu -->
+			<div id="sidebar-left" class="span2">
+				<div class="nav-collapse sidebar-nav">
+					<ul class="nav nav-tabs nav-stacked main-menu">
+						<li><a href="home.html"><i class="icon-home"></i><span class="hidden-tablet"> Home</span></a></li>
+						<li><a href="index.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+						<li>
+							<a class="dropmenu" href="#"><i class="icon-bookmark"></i><span class="hidden-tablet"> FAQ</span></a>
+							<ul>
+								<li><a class="submenu" href="submenu1.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 1</span></a></li>
+								<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 2</span></a></li>
+								<li><a class="submenu" href="submenu3.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 3</span></a></li>
+							</ul>
+						</li>
+						<li><a href="support.html"><i class="icon-tasks"></i><span class="hidden-tablet"> Support</span></a></li>
+
+						<li><a href="contact.html"><i class="icon-phone"></i>Contact us</img></a></li>
+					</ul>
+					<!--<div class="ad-warp">-->
+						<!--&lt;!&ndash; start: advertisement or photo &ndash;&gt;-->
+						<!--<img src="img/smarthome.png">-->
+					<!--</div>-->
+				</div>
+			</div>
+			<!-- end: Main Menu -->
+
+
+			<!-- start: second navigator bar -->
+			<div id="content" class="span10">
+				<ul class="breadcrumb">
+					<li><i class="icon-home"></i><a href="index.html">Home</a><i class="icon-angle-right"></i></li>
+					<li><a href="#">Dashboard</a></li>
+				</ul>
+			<!-- start: second navigator bar -->
+
+			<!--start: Content -->
+
+
+
+
+				<!--Start: sensors in the office row1-->
+				<div class="row-fluid">
+					<!--start：Add Rooms and sensors-->
+
+
+					<header id="admin-bar" data-bind="if:allow_edit" style="display: block; top: 120px;">
+						<ul class="board-action">
+							<li id="add-rooms" data-bind="click: createPane"><i class="icon-plus icon-white"></i><label>Add Rooms</label></li>
+						</ul>
+					</header>
+
+
+					<div style="display:hidden">
+						<ul data-bind="template: { name: 'pane-template', foreach: panes}">
+						</ul>
+					</div>
+
+					<!--The template of adding sensors-->
+					<script type="text/html" id="pane-template">
+						<li data-bind="pane: true">
+							<header>
+								<h1 data-bind="text: title"></h1>
+								<ul class="board-toolbar pane-tools">
+									<li data-bind="pluginEditor: {operation: 'add', type: 'widget'}">
+										<i class="icon-plus icon-white"></i>
+									</li>
+									<li data-bind="pluginEditor: {operation: 'edit', type: 'pane'}">
+										<i class="icon-wrench icon-white"></i>
+									</li>
+									<li data-bind="pluginEditor: {operation: 'delete', type: 'pane'}">
+										<i class="icon-trash icon-white"></i>
+									</li>
+								</ul>
+							</header>
+							<section data-bind="foreach: widgets">
+								<div class="sub-section" data-bind="css: 'sub-section-height-' + height()">
+									<div class="widget" data-bind="widget: true, css:{fillsize:fillSize}"></div>
+									<div class="sub-section-tools">
+										<ul class="board-toolbar">
+											<!-- ko if:$parent.widgetCanMoveUp($data) -->
+											<li data-bind="click:$parent.moveWidgetUp"><i class="icon-chevron-up icon-white"></i></li>
+											<!-- /ko -->
+											<!-- ko if:$parent.widgetCanMoveDown($data) -->
+											<li data-bind="click:$parent.moveWidgetDown"><i class="icon-chevron-down icon-white"></i></li>
+											<!-- /ko -->
+											<li data-bind="pluginEditor: {operation: 'edit', type: 'widget'}"><i class="icon-wrench icon-white"></i></li>
+											<li data-bind="pluginEditor: {operation: 'delete', type: 'widget'}"><i class="icon-trash icon-white"></i></li>
+										</ul>
+									</div>
+								</div>
+							</section>
+						</li>
+					</script>
+					<br><br><br><br><br><br>
+					<!--end：Add Rooms and sensors-->
+
+
+					<div class="box black span4" onTablet="span6" onDesktop="span4">
+					<div class="box-header">
+						<h2><i class="halflings-icon white user"></i><span class="break"></span>Temperature</h2>
+						<div class="box-icon">
+							<a href="#" class="btn-configurate"><i class="halflings-icon white wrench"></i></a>
+							<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+							<a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
+						</div>
+					</div>
+					<!--<div style="width:500px;height:2px; background:#fdfdfd;"></div>-->
+					<div class="box-content">
+						<ul class="dashboard-list sensor">
+							<li class="black">
+								<a href="#">
+									<img class="avatar" alt="Junyi ZH" src="img/temperature.png">
+								</a>
+								<strong>ID:</strong>T001<br>
+								<strong>Name:</strong> Temp1<br>
+								<strong>Status:</strong> Running
+							</li>
+						</ul>
+					</div>
+				</div>
+					<div class="box black span4" onTablet="span6" onDesktop="span4">
+					<div class="box-header">
+						<h2><i class="halflings-icon white user"></i><span class="break"></span>Lamp</h2>
+						<div class="box-icon">
+							<a href="#" class="btn-configurate"><i class="halflings-icon white wrench"></i></a>
+							<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+							<a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
+						</div>
+					</div>
+					<!--<div style="width:500px;height:2px; background:#fdfdfd;"></div>-->
+					<div class="box-content">
+						<ul class="dashboard-list sensor">
+							<li class="black">
+								<a href="#">
+									<img class="avatar" alt="Junyi ZH" src="img/lampe.png">
+								</a>
+
+								<strong>ID:</strong>L001
+								<button style="width: 40px;height: 25px;float: right;border-radius: 10px;margin-right: 15px;">off</button>
+								<button style="width: 40px;height: 25px;float: right;border-radius: 10px;margin-right: 5px;">on</button>&nbsp;<br>
+								<strong>Name:</strong>Lamp1 <br>
+								<strong>Status:</strong> Running
+							</li>
+						</ul>
+					</div>
+				</div>
+				</div>
+
+
+				<!--end: sensors in the office row1-->
+			</div>
+
+		</div>
+
+		</div><!--/#content.span10-->
+		</div><!--/.fluid-container-->
+			  <!-- end: Content -->
+
+		<!-- start: footer-->
+	<footer>
+		<p><span style="text-align:left;float:left">&copy; 2018 <a href="#" alt="Bootstrap_sensor_Dashboard">Bootstrap IOT Dashboard</a></span></p>
+	</footer>
+		<!-- end: footer-->
+
+		<!-- start: JavaScript-->
+
+		<!--添加传感器和房间-->
+		<script type="text/javascript">
+            head.js("lib/js/thirdparty/knockout.js",
+                "lib/js/thirdparty/jquery.js",
+                "lib/js/thirdparty/jquery-ui.js",
+                "lib/js/thirdparty/underscore.js",
+                "lib/js/thirdparty/jquery.gridster.js",
+                "lib/js/thirdparty/jquery.caret.js",
+                "lib/js/thirdparty/codemirror.js",
+                "lib/js/thirdparty/jquery.xdomainrequest.js",
+
+                "lib/js/freeboard/FreeboardModel.js",
+                "lib/js/freeboard/DatasourceModel.js",
+                "lib/js/freeboard/PaneModel.js",
+                "lib/js/freeboard/WidgetModel.js",
+                "lib/js/freeboard/FreeboardUI.js",
+                "lib/js/freeboard/DialogBox.js",
+                "lib/js/freeboard/PluginEditor.js",
+                "lib/js/freeboard/ValueEditor.js",
+                "lib/js/freeboard/JSEditor.js",
+                "lib/js/freeboard/DeveloperConsole.js",
+                "lib/js/freeboard/freeboard.js",
+
+                "plugins/freeboard/freeboard.datasources.js",
+                "plugins/freeboard/freeboard.widgets.js",
+                "examples/plugin_example.js",
+
+                // *** Load more plugins here ***
+                function(){
+                    $(function()
+                    { //DOM Ready
+                        freeboard.setAssetRoot("/freeboard-ui/");
+                        freeboard.initialize(true);
+                    });
+                });
+		</script>
+
+
+		<!--影响布局-->
+		<script src="js/dashboard_plugins.js"></script>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery-migrate-1.0.0.min.js"></script>
+		<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
+		<script src='js/fullcalendar.min.js'></script>
+		<script src='js/jquery.dataTables.min.js'></script>
+		<script src="js/jquery.chosen.min.js"></script>
+		<script src="js/jquery.uniform.min.js"></script>
+		<script src="js/jquery.cleditor.min.js"></script>
+		<script src="js/jquery.elfinder.min.js"></script>
+		<script src="js/jquery.raty.min.js"></script>
+		<script src="js/jquery.uploadify-3.1.min.js"></script>
+		<script src="js/jquery.masonry.min.js"></script>
+		<script src="js/jquery.sparkline.min.js"></script>
+		<script src="js/custom.js"></script>
+	<!-- end: JavaScript-->
+	
+</body>
+</html>
