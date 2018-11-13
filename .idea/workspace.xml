@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2d1f936-8f59-4899-9d84-3649fbc9b45b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Test/Hoverable Menu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Test/ads1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Test/ads2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Test/index1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Test/js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Test/pagination.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Test/test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Test/ui.html" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -434,12 +441,12 @@
       <workItem from="1541937134164" duration="11935000" />
       <workItem from="1541961478874" duration="8368000" />
       <workItem from="1542106301420" duration="2098000" />
-      <workItem from="1542136297741" duration="2991000" />
+      <workItem from="1542136297741" duration="3157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93889000" />
+    <option name="totallyTimeSpent" value="94055000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
