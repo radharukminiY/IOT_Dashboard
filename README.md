@@ -1,7 +1,7 @@
 BIGTREE_IOT_Dashboard
 =========================
 - Create by Junyi 
-- A IOT Dashboard Admin System
+- A IOT Dashboard Management System
 
 Description
 ----------------------------
@@ -12,9 +12,7 @@ Right side bar
 - home.html
 - contact.html
 - login.html
-- submenu1.html
-- submenu2.html
-- submenu3.html
+- faq.html
 - support.html
 
 navigation bar
@@ -53,6 +51,7 @@ The iconic SVG, font, and CSS toolkit
 
 
 The jQuery plugins used in this project
+Extra js files prepare for other functions
 ---------------------------
 
         <script src="js/jquery-1.9.1.min.js"></script>
