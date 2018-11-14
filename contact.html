@@ -215,117 +215,15 @@
             <div class="row-fluid">
                 <!--start：Add Rooms and sensors-->
 
-
-                <header id="admin-bar" data-bind="if:allow_edit" style="display: block; top: 120px;">
-                    <ul class="board-action">
-                        <li id="add-rooms" data-bind="click: createPane"><i class="icon-plus icon-white"></i><label>Add Rooms</label></li>
-                    </ul>
-                </header>
-
-
-                <div style="display:hidden">
-                    <ul data-bind="template: { name: 'pane-template', foreach: panes}">
-                    </ul>
-                </div>
-
                 <!--The template of adding sensors-->
-                <script type="text/html" id="pane-template">
-                    <li data-bind="pane: true">
-                        <header>
-                            <h1 data-bind="text: title"></h1>
-                            <ul class="board-toolbar pane-tools">
-                                <li data-bind="pluginEditor: {operation: 'add', type: 'widget'}">
-                                    <i class="icon-plus icon-white"></i>
-                                </li>
-                                <li data-bind="pluginEditor: {operation: 'edit', type: 'pane'}">
-                                    <i class="icon-wrench icon-white"></i>
-                                </li>
-                                <li data-bind="pluginEditor: {operation: 'delete', type: 'pane'}">
-                                    <i class="icon-trash icon-white"></i>
-                                </li>
-                            </ul>
-                        </header>
-                        <section data-bind="foreach: widgets">
-                            <div class="sub-section" data-bind="css: 'sub-section-height-' + height()">
-                                <div class="widget" data-bind="widget: true, css:{fillsize:fillSize}"></div>
-                                <div class="sub-section-tools">
-                                    <ul class="board-toolbar">
-                                        <!-- ko if:$parent.widgetCanMoveUp($data) -->
-                                        <li data-bind="click:$parent.moveWidgetUp"><i class="icon-chevron-up icon-white"></i></li>
-                                        <!-- /ko -->
-                                        <!-- ko if:$parent.widgetCanMoveDown($data) -->
-                                        <li data-bind="click:$parent.moveWidgetDown"><i class="icon-chevron-down icon-white"></i></li>
-                                        <!-- /ko -->
-                                        <li data-bind="pluginEditor: {operation: 'edit', type: 'widget'}"><i class="icon-wrench icon-white"></i></li>
-                                        <li data-bind="pluginEditor: {operation: 'delete', type: 'widget'}"><i class="icon-trash icon-white"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-                    </li>
-                </script>
-                <br><br><br><br><br><br>
                 <!--end：Add Rooms and sensors-->
 
-
-                <div class="box black span4" onTablet="span6" onDesktop="span4">
-                    <div class="box-header">
-                        <h2><i class="halflings-icon white user"></i><span class="break"></span>Temperature</h2>
-                        <div class="box-icon">
-                            <a href="#" class="btn-configurate"><i class="halflings-icon white wrench"></i></a>
-                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-                        </div>
-                    </div>
-                    <!--<div style="width:500px;height:2px; background:#fdfdfd;"></div>-->
-                    <div class="box-content">
-                        <ul class="dashboard-list sensor">
-                            <li class="black">
-                                <a href="#">
-                                    <img class="avatar" alt="Junyi ZH" src="img/temperature.png">
-                                </a>
-                                <strong>ID:</strong>T001<br>
-                                <strong>Name:</strong> Temp1<br>
-                                <strong>Status:</strong> Running
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="box black span4" onTablet="span6" onDesktop="span4">
-                    <div class="box-header">
-                        <h2><i class="halflings-icon white user"></i><span class="break"></span>Lamp</h2>
-                        <div class="box-icon">
-                            <a href="#" class="btn-configurate"><i class="halflings-icon white wrench"></i></a>
-                            <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-                            <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
-                        </div>
-                    </div>
-                    <!--<div style="width:500px;height:2px; background:#fdfdfd;"></div>-->
-                    <div class="box-content">
-                        <ul class="dashboard-list sensor">
-                            <li class="black">
-                                <a href="#">
-                                    <img class="avatar" alt="Junyi ZH" src="img/lampe.png">
-                                </a>
-
-                                <strong>ID:</strong>L001
-                                <button style="width: 40px;height: 25px;float: right;border-radius: 10px;margin-right: 15px;">off</button>
-                                <button style="width: 40px;height: 25px;float: right;border-radius: 10px;margin-right: 5px;">on</button>&nbsp;<br>
-                                <strong>Name:</strong>Lamp1 <br>
-                                <strong>Status:</strong> Running
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <!--end: sensors in the office row1-->
             </div>
 
-
-            <!--end: sensors in the office row1-->
         </div>
 
-    </div>
-
-</div><!--/#content.span10-->
+    </div><!--/#content.span10-->
 </div><!--/.fluid-container-->
 <!-- end: Content -->
 
