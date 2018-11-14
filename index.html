@@ -20,7 +20,6 @@
 	<link href="lib/css/thirdparty/jquery.gridster.min.css" rel="stylesheet" />
 	<link href="lib/css/thirdparty/codemirror.css" rel="stylesheet" />
 	<link href="lib/css/thirdparty/codemirror-ambiance.css" rel="stylesheet" />
-	<link href="lib/css/freeboard/styles.css" rel="stylesheet" />
 	<script src="lib/js/thirdparty/head.js"></script>
 	<!--basic ui design for dashboard-->
 	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
@@ -185,14 +184,7 @@
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li><a href="home.html"><i class="icon-home"></i><span class="hidden-tablet"> Home</span></a></li>
 						<li><a href="index.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Dashboard</span></a></li>
-						<li>
-							<a class="dropmenu" href="#"><i class="icon-bookmark"></i><span class="hidden-tablet"> FAQ</span></a>
-							<ul>
-								<li><a class="submenu" href="submenu1.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 1</span></a></li>
-								<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 2</span></a></li>
-								<li><a class="submenu" href="submenu3.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 3</span></a></li>
-							</ul>
-						</li>
+						<li><a href="faq.html"><i class="icon-bookmark"></i><span class="hidden-tablet"> FAQ</span></a></li>
 						<li><a href="support.html"><i class="icon-tasks"></i><span class="hidden-tablet"> Support</span></a></li>
 
 						<li><a href="contact.html"><i class="icon-phone"></i>Contact us</img></a></li>
@@ -346,41 +338,6 @@
 		<!-- start: JavaScript-->
 
 		<!--添加传感器和房间-->
-		<script type="text/javascript">
-            head.js("lib/js/thirdparty/knockout.js",
-                "lib/js/thirdparty/jquery.js",
-                "lib/js/thirdparty/jquery-ui.js",
-                "lib/js/thirdparty/underscore.js",
-                "lib/js/thirdparty/jquery.gridster.js",
-                "lib/js/thirdparty/jquery.caret.js",
-                "lib/js/thirdparty/codemirror.js",
-                "lib/js/thirdparty/jquery.xdomainrequest.js",
-
-                "lib/js/freeboard/FreeboardModel.js",
-                "lib/js/freeboard/DatasourceModel.js",
-                "lib/js/freeboard/PaneModel.js",
-                "lib/js/freeboard/WidgetModel.js",
-                "lib/js/freeboard/FreeboardUI.js",
-                "lib/js/freeboard/DialogBox.js",
-                "lib/js/freeboard/PluginEditor.js",
-                "lib/js/freeboard/ValueEditor.js",
-                "lib/js/freeboard/JSEditor.js",
-                "lib/js/freeboard/DeveloperConsole.js",
-                "lib/js/freeboard/freeboard.js",
-
-                "plugins/freeboard/freeboard.datasources.js",
-                "plugins/freeboard/freeboard.widgets.js",
-                "examples/plugin_example.js",
-
-                // *** Load more plugins here ***
-                function(){
-                    $(function()
-                    { //DOM Ready
-                        freeboard.setAssetRoot("/freeboard-ui/");
-                        freeboard.initialize(true);
-                    });
-                });
-		</script>
 
 
 		<!--影响布局-->
